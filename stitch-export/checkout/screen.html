@@ -1,0 +1,289 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Checkout - Global Roast Coffee</title>
+<!-- Google Fonts: Fraunces & DM Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS CDN with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#F5ECE1',
+              dark: '#2B1810',
+              text: '#34231E',
+              muted: '#7A6E65',
+              border: '#E3D7C9',
+              inputBg: '#FAF7F2',
+              cardBg: '#FFFFFF',
+              btnPrimary: '#938780'
+            }
+          },
+          fontFamily: {
+            serif: ['Fraunces', 'serif'],
+            sans: ['"DM Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+<!-- Custom Typography & Specific Adjustments -->
+<style data-purpose="typography">
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background-color: #F5ECE1;
+      color: #34231E;
+      -webkit-font-smoothing: antialiased;
+    }
+    .font-fraunces {
+      font-family: 'Fraunces', Georgia, serif;
+      font-optical-sizing: auto;
+    }
+  </style>
+<!-- Form Styles -->
+<style data-purpose="form-controls">
+    .custom-input {
+      background-color: #FAF7F2;
+      border: 1px solid #DFD5C8;
+      border-radius: 0.625rem;
+      padding: 0.65rem 0.95rem;
+      font-size: 0.88rem;
+      color: #3A2B27;
+      outline: none;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+      width: 100%;
+    }
+    .custom-input:focus {
+      border-color: #8C786D;
+      box-shadow: 0 0 0 1px #8C786D;
+      background-color: #FFFFFF;
+    }
+    .custom-input::placeholder {
+      color: #8F847D;
+      font-size: 0.86rem;
+    }
+    .custom-radio-card {
+      background-color: #FAF7F2;
+      border: 1px solid #DFD5C8;
+      border-radius: 0.75rem;
+      transition: all 0.2s ease;
+    }
+    .custom-radio-card:hover {
+      border-color: #C0B5A7;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-[#34231E] selection:text-[#F5ECE1]">
+<!-- BEGIN: SiteHeader -->
+<header class="w-full pt-4 pb-4 px-6 md:px-12 border-b border-[#EADFCF]/60">
+<div class="max-w-[1180px] mx-auto flex items-center justify-between">
+<!-- Logo & Brand Header -->
+<a class="flex items-center gap-2 group" data-purpose="brand-logo" href="#"><div class="w-10 h-10 flex-shrink-0 flex items-center justify-center"><img src="https://lh3.googleusercontent.com/aida/AEtjO1VxjhSgmTjXTyPOvgm4DFk79L8eJpMch_IeTSqC7A6clTcwgV1_lxxQIpj-vNnLbULGq2cvty2joFfVhmftRlrr2ZXVFpJRwdPOugH5UcMmYO11c83K0p3rSoyT1VQXnAm2cmKD19yZVjIdWMGsZUf8XXMr2QejBGYKs45xwyYlCZUEw_C6f0UM8WGzO4-fl0q2PpzfqZqx7PirCcRyyRQ6BYGhooUwclHXL3AO8Rng7A" alt="Global Roast Coffee" class="w-10 h-10 object-contain"></div><div class="flex flex-col leading-tight"><span class="font-serif font-bold text-[0.98rem] tracking-tight text-[#2D1B15]">GLOBAL ROAST</span><span class="text-[0.62rem] font-semibold tracking-[0.16em] text-[#55694D] uppercase">Coffee</span></div></a>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center space-x-9 text-[0.875rem] font-medium text-[#463832]">
+<a class="hover:text-black transition-colors" href="#">Inicio</a>
+<a class="hover:text-black transition-colors" href="#">Tienda</a>
+<a class="hover:text-black transition-colors" href="#">Nuestro Café</a>
+<a class="hover:text-black transition-colors" href="#">Contacto</a>
+</nav>
+<!-- Cart Icon with Badge -->
+<div class="flex items-center">
+<a aria-label="Bolsa de compras" class="relative p-1 text-[#34231E] hover:opacity-80 transition-opacity" data-purpose="cart-button" href="#">
+<!-- Shopping Bag Outline -->
+<svg class="w-6 h-6 stroke-[1.4]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<!-- Count Badge -->
+<span class="absolute -top-1 -right-1 bg-[#D19B68] text-white text-[0.65rem] font-bold w-4 h-4 rounded-full flex items-center justify-center leading-none">
+            1
+          </span>
+</a>
+</div>
+</div>
+</header>
+<!-- END: SiteHeader -->
+<!-- BEGIN: MainContent -->
+<main class="flex-grow max-w-[1180px] w-full mx-auto px-6 md:px-12 pt-8 pb-16">
+<!-- Page Main Heading -->
+<h1 class="font-fraunces text-[2.75rem] text-[#2B1B17] font-normal mb-8 tracking-tight">Checkout</h1>
+<!-- Two-column Checkout Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+<!-- LEFT COLUMN: Checkout Form Sections (7 cols) -->
+<div class="lg:col-span-7 space-y-9" data-purpose="checkout-form-container">
+<!-- Section: Datos de contacto -->
+<section data-purpose="contact-data-section">
+<h2 class="font-fraunces text-[1.45rem] text-[#2D1B15] mb-4 font-normal">Datos de contacto</h2>
+<div class="space-y-3.5">
+<div>
+<label class="block text-[0.82rem] font-medium text-[#463832] mb-1" for="fullname">Nombre completo</label>
+<input class="custom-input" id="fullname" placeholder="" type="text">
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+<div>
+<label class="block text-[0.82rem] font-medium text-[#463832] mb-1" for="phone">Teléfono (WhatsApp)</label>
+<input class="custom-input text-[#34231E]" id="phone" placeholder="+503 7123-4567" type="tel" value="+503 7123-4567">
+</div>
+<div>
+<label class="block text-[0.82rem] font-medium text-[#463832] mb-1" for="email">Email</label>
+<input class="custom-input" id="email" placeholder="" type="email">
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Dirección de entrega -->
+<section data-purpose="shipping-address-section">
+<h2 class="font-fraunces text-[1.45rem] text-[#2D1B15] mb-4 font-normal">Dirección de entrega</h2>
+<div class="space-y-3.5">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+<div>
+<label class="block text-[0.82rem] font-medium text-[#463832] mb-1" for="departamento">Departamento</label>
+<div class="relative">
+<select class="custom-input appearance-none pr-8 cursor-pointer" id="departamento">
+<option selected="" value="">Elegí uno</option>
+<option value="san-salvador">San Salvador</option>
+<option value="la-libertad">La Libertad</option>
+<option value="santa-ana">Santa Ana</option>
+</select>
+<span class="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-[#7D7068]">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</span>
+</div>
+</div>
+<div>
+<label class="block text-[0.82rem] font-medium text-[#463832] mb-1" for="municipio">Municipio</label>
+<input class="custom-input" id="municipio" placeholder="" type="text">
+</div>
+</div>
+<div>
+<label class="block text-[0.82rem] font-medium text-[#463832] mb-1" for="direccion">Dirección exacta</label>
+<input class="custom-input" id="direccion" placeholder="Colonia, calle, número de casa" type="text">
+</div>
+<div>
+<label class="block text-[0.82rem] font-medium text-[#463832] mb-1" for="referencia">Referencia</label>
+<input class="custom-input" id="referencia" placeholder="Ej. portón negro, frente al parque" type="text">
+</div>
+</div>
+</section>
+<!-- Section: Método de pago -->
+<section data-purpose="payment-method-section">
+<h2 class="font-fraunces text-[1.45rem] text-[#2D1B15] mb-4 font-normal">Método de pago</h2>
+<div class="space-y-2.5">
+<!-- Payment Option 1: Transferencia -->
+<label class="custom-radio-card flex items-start gap-3.5 p-3.5 cursor-pointer">
+<input class="mt-1 text-[#34231E] focus:ring-0 border-[#C2B7A8] w-4 h-4" name="payment_method" type="radio" value="transfer">
+<div>
+<span class="block text-[0.86rem] font-medium text-[#2E1F1A] leading-tight">Transferencia bancaria</span>
+<span class="block text-[0.8rem] text-[#7A6E65] mt-0.5">Te enviamos los datos de la cuenta por WhatsApp.</span>
+</div>
+</label>
+<!-- Payment Option 2: Efectivo -->
+<label class="custom-radio-card flex items-start gap-3.5 p-3.5 cursor-pointer">
+<input class="mt-1 text-[#34231E] focus:ring-0 border-[#C2B7A8] w-4 h-4" name="payment_method" type="radio" value="cash">
+<div>
+<span class="block text-[0.86rem] font-medium text-[#2E1F1A] leading-tight">Pago contra entrega (efectivo)</span>
+<span class="block text-[0.8rem] text-[#7A6E65] mt-0.5">Pagás al recibir tu café.</span>
+</div>
+</label>
+</div>
+</section>
+<!-- Section: Notas adicionales -->
+<section data-purpose="order-notes-section">
+<h2 class="font-fraunces text-[1.45rem] text-[#2D1B15] mb-4 font-normal">Notas adicionales <span class="font-sans text-[0.95rem] text-[#695D56] font-normal">(opcional)</span></h2>
+<div>
+<textarea class="custom-input resize-y" id="notas" placeholder="Horario preferido de entrega, instrucciones..." rows="3"></textarea>
+</div>
+</section>
+</div>
+<!-- RIGHT COLUMN: Order Summary Card (5 cols) -->
+<aside class="lg:col-span-5" data-purpose="order-summary-sidebar">
+<div class="bg-white rounded-[1.25rem] p-6 sm:p-7 border border-[#E9E0D4] shadow-[0_2px_12px_rgba(0,0,0,0.03)]">
+<h2 class="font-fraunces text-[1.45rem] text-[#2B1B17] font-normal mb-5">Resumen del pedido</h2>
+<!-- Cart Item Details -->
+<div class="flex items-start gap-3.5 pb-5 border-b border-[#EFEAE2]">
+<!-- Product Thumbnail -->
+<div class="w-12 h-14 bg-[#F2ECE3] rounded-md overflow-hidden flex-shrink-0 flex items-center justify-center p-1">
+<img alt="Café Pacamara" class="h-full w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeD53FxGeybzqxoRX-3v7yJnk23xufYqPhUww8QSTCVELgGagHVXSmCaCa2LEXxUgr7A3LH5AJr8_ciYCozkqKCNi-fxPjFLkTLlr6wXbbjt95QzF7YG1LrCGqpTEeLfwzTc4aq9h36ZiWa3imnAnHcuLhp_8drXMn_jB2tYPLly7OLckqXb-4l5FW5921LtPyHKPMZXOCZu6X4puDCZErwezGksq8PUWeQujvy8bLz-5YhbZmRlhNAg">
+</div>
+<!-- Product Meta -->
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-fraunces font-bold text-[0.92rem] text-[#2B1B17]">Pacamara</h3>
+<p class="text-[0.74rem] text-[#7A6E65]">340g · Grano entero</p>
+</div>
+<!-- Delete Button -->
+<button aria-label="Eliminar producto" class="text-[#857B74] hover:text-[#2B1B17] transition-colors p-0.5" type="button">
+<svg class="w-4 h-4 stroke-[1.6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<!-- Quantity Controls & Item Total -->
+<div class="flex items-center justify-between mt-2.5">
+<!-- Quantity Counter -->
+<div class="inline-flex items-center border border-[#DFD6CB] rounded-full px-2 py-0.5 bg-white text-xs">
+<button class="w-4 h-4 flex items-center justify-center text-[#6A5E57] hover:text-black" type="button">
+<span class="sr-only">Disminuir</span>-
+                  </button>
+<span class="px-2 font-medium text-[0.8rem] text-[#2B1B17]">1</span>
+<button class="w-4 h-4 flex items-center justify-center text-[#6A5E57] hover:text-black" type="button">
+<span class="sr-only">Aumentar</span>+
+                  </button>
+</div>
+<!-- Line Item Price -->
+<span class="text-[0.88rem] font-medium text-[#2B1B17]">$6.50</span>
+</div>
+</div>
+</div>
+<!-- Price Calculations -->
+<div class="py-4 space-y-2 text-[0.86rem] text-[#4A3D36]">
+<div class="flex justify-between items-center">
+<span class="">Subtotal</span>
+<span class="text-[#2B1B17]">$6.50</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="">Envío</span>
+<span class="text-[#2B1B17]">$3.50</span>
+</div>
+</div>
+<!-- Total Due -->
+<div class="pt-2 pb-5 flex justify-between items-baseline border-b border-[#EFEAE2]">
+<span class="font-fraunces text-base text-[#2B1B17]">Total</span>
+<span class="font-fraunces font-bold text-lg text-[#2B1B17]">$10.00</span>
+</div>
+<!-- Terms and Conditions Agreement -->
+<div class="mt-4 flex items-start gap-2.5">
+<input class="rounded-full w-4 h-4 mt-0.5 border-[#C4B9AD] text-[#34231E] focus:ring-0 cursor-pointer" id="terms" type="checkbox">
+<label class="text-[0.74rem] text-[#695D56] leading-snug cursor-pointer select-none" for="terms">
+              He leído y acepto los Términos y Condiciones, la Política de Privacidad y la Política de Envíos
+            </label>
+</div>
+<!-- Place Order Button -->
+<div class="mt-5">
+<button class="w-full bg-[#968A82] hover:bg-[#857971] text-white font-medium py-3 px-4 rounded-[0.75rem] text-[0.92rem] transition-colors shadow-sm" type="submit">
+              Confirmar pedido
+            </button>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- END: MainContent -->
+<!-- BEGIN: SiteFooter -->
+<footer class="w-full py-8 text-center text-[0.78rem] text-[#7A6E65] border-t border-[#EAE0D2]">
+<div class="max-w-[1180px] mx-auto px-4">
+      © 2026 Global Roast Coffee
+    </div>
+</footer>
+<!-- END: SiteFooter -->
+
+
+</body></html>

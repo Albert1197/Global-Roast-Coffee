@@ -1,0 +1,8 @@
+node_modules
+dist
+.env
+.env.local
+*.log
+
+# Contiene la API key de Stitch — no subirlo al repositorio
+opencode.json

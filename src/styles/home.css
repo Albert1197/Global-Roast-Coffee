@@ -1,0 +1,15 @@
+/* Estilos custom de la pantalla Home (Stitch: hero-wood-bg / wood-grain-overlay) */
+.hero-wood-bg {
+  background-color: #27170e;
+  background-image:
+    radial-gradient(circle at 80% 20%, rgba(20, 10, 5, 0.45) 0%, rgba(15, 8, 4, 0.85) 75%),
+    radial-gradient(ellipse at 15% 55%, rgba(65, 38, 24, 0.4) 0%, rgba(20, 10, 5, 0.8) 70%),
+    repeating-linear-gradient(45deg, rgba(30, 17, 10, 0.2) 0px, rgba(30, 17, 10, 0.2) 2px, transparent 2px, transparent 8px),
+    linear-gradient(180deg, rgba(38, 22, 14, 0.8) 0%, rgba(24, 13, 8, 0.95) 100%);
+}
+
+.wood-grain-overlay {
+  background:
+    radial-gradient(circle at 60% 15%, rgba(120, 75, 45, 0.18) 0%, transparent 45%),
+    radial-gradient(circle at 85% 80%, rgba(95, 55, 30, 0.25) 0%, transparent 40%);
+}

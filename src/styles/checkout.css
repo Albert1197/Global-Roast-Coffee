@@ -1,0 +1,32 @@
+/* Estilos custom de la pantalla Checkout (Stitch: form-controls) */
+.custom-input {
+  background-color: #faf7f2;
+  border: 1px solid #dfd5c8;
+  border-radius: 0.625rem;
+  padding: 0.65rem 0.95rem;
+  font-size: 0.88rem;
+  color: #3a2b27;
+  outline: none;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+  width: 100%;
+}
+.custom-input:focus {
+  border-color: #8c786d;
+  box-shadow: 0 0 0 1px #8c786d;
+  background-color: #ffffff;
+}
+.custom-input::placeholder {
+  color: #8f847d;
+  font-size: 0.86rem;
+}
+.custom-radio-card {
+  background-color: #faf7f2;
+  border: 1px solid #dfd5c8;
+  border-radius: 0.75rem;
+  transition: all 0.2s ease;
+}
+.custom-radio-card:hover {
+  border-color: #c0b5a7;
+}

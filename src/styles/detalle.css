@@ -1,0 +1,9 @@
+/* Estilos custom de la pantalla Detalle del café (Stitch: custom-shadows) */
+.product-img-shadow {
+  box-shadow: 0 10px 30px -10px rgba(78, 52, 46, 0.15);
+}
+
+.selected-option {
+  border-color: #352522 !important;
+  background-color: #ffffff !important;
+}

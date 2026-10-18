@@ -1,0 +1,220 @@
+<!DOCTYPE html><html lang="es" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Tienda | Global Roast Coffee</title>
+<!-- Google Fonts: Fraunces & DM Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS v3 with Forms and Container Queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'cream-bg': '#F4EBE1',
+            'coffee-dark': '#2B1810',
+            'coffee-primary': '#3E2723',
+            'badge-medium': '#B48B57',
+            'badge-light': '#D6C3AA',
+            'sub-tag': '#687768',
+          },
+          fontFamily: {
+            fraunces: ['Fraunces', 'serif'],
+            sans: ['"DM Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+<!-- Custom Styles for Typography & UI Polish -->
+<style data-purpose="typography">
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background-color: #F4EBE1;
+      color: #33261D;
+    }
+    .font-fraunces {
+      font-family: 'Fraunces', serif;
+    }
+  </style>
+<style data-purpose="card-layout">
+    .product-card {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px -6px rgba(60, 40, 20, 0.08);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-[#B48B57]/30">
+<!-- BEGIN: MainHeader -->
+<header class="w-full border-b border-[#E8DACB]/60 bg-[#F4EBE1]/90 backdrop-blur-sm sticky top-0 z-50">
+<div class="max-w-[1240px] mx-auto px-6 h-20 flex items-center justify-between">
+<!-- Brand Logo Container -->
+<a class="flex items-center gap-3 group" data-purpose="brand-logo" href="#"><img src="https://lh3.googleusercontent.com/aida/AEtjO1Unh_sParI6daTBKLrcr7CnhvfPYB4gORCLX9Nu880kEnuxM7evrXijC1pEppa4wOhGFebvTDs1T5XvlXEwgmgSy3_5fpnRo6LXnjhHzdtIz_lQ1Qs4khN7hFHx2aRU_RWy1EQFIEAV5zz7OFSDe0qLmmzPkm9mtIp_ScmbuAFudYPBamN-GujxBiBH9j-BklONHQzgpC2RQVKq9S60e0o2TklX5tkBuILXt-G4QDbYyA" alt="Global Roast Coffee" class="h-12 w-auto object-contain transition-transform group-hover:scale-105"></a>
+<!-- Centered Navigation Links -->
+<nav class="hidden md:flex items-center space-x-9 text-[15px]" data-purpose="main-navigation">
+<a class="text-[#5C4A3E] hover:text-[#2B1810] font-medium transition-colors" href="#">
+          Inicio
+        </a>
+<a class="text-[#2B1810] font-semibold relative after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[2px] after:bg-[#2B1810]" href="#">
+          Tienda
+        </a>
+<a class="text-[#5C4A3E] hover:text-[#2B1810] font-medium transition-colors" href="#">
+          Nuestro Café
+        </a>
+<a class="text-[#5C4A3E] hover:text-[#2B1810] font-medium transition-colors" href="#">
+          Contacto
+        </a>
+</nav>
+<!-- Cart Shopping Bag Icon -->
+<div class="flex items-center" data-purpose="cart-widget">
+<button aria-label="Ver carrito" class="p-2 text-[#2B1810] hover:text-[#8B5A2B] transition-colors rounded-full hover:bg-black/5" type="button">
+<!-- Shopping Bag Outline SVG -->
+<svg class="w-[22px] h-[22px]" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
+<path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4H6z"></path>
+<line x1="3" x2="21" y1="6" y2="6"></line>
+<path d="M16 10a4 4 0 01-8 0"></path>
+</svg>
+</button>
+</div>
+</div>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: MainContent -->
+<main class="flex-grow w-full max-w-[1240px] mx-auto px-6 pt-10 pb-20">
+<!-- Page Title Header -->
+<section class="mb-7" data-purpose="page-intro">
+<h1 class="font-fraunces text-[42px] md:text-[46px] font-bold text-[#2B1810] tracking-tight">
+        Nuestra selección global
+      </h1>
+</section>
+<!-- Filter Buttons Bar -->
+<section class="flex flex-wrap items-center gap-2.5 pb-8 border-b border-[#E5D7C6]/75 mb-10" data-purpose="product-filters">
+<!-- Dropdown Filter: País de origen -->
+<div class="relative inline-block">
+<button class="inline-flex items-center gap-2 px-4 py-1.5 text-[14px] bg-white text-[#33261D] rounded-full border border-[#DFD1C0] hover:border-[#B48B57] transition shadow-sm font-medium" type="button">
+<span class="">País de origen</span>
+<svg class="w-3.5 h-3.5 text-[#5C4A3E]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<!-- Filter Pill: Claro -->
+<button class="px-4 py-1.5 text-[14px] bg-white text-[#33261D] rounded-full border border-[#DFD1C0] hover:border-[#B48B57] hover:bg-white/80 transition shadow-sm font-medium" type="button">
+        Claro
+      </button>
+<!-- Filter Pill: Medio -->
+<button class="px-4 py-1.5 text-[14px] bg-white text-[#33261D] rounded-full border border-[#DFD1C0] hover:border-[#B48B57] hover:bg-white/80 transition shadow-sm font-medium" type="button">
+        Medio
+      </button>
+<!-- Filter Pill: Oscuro -->
+<button class="px-4 py-1.5 text-[14px] bg-white text-[#33261D] rounded-full border border-[#DFD1C0] hover:border-[#B48B57] hover:bg-white/80 transition shadow-sm font-medium" type="button">
+        Oscuro
+      </button>
+</section>
+<!-- Products Grid (3 Columns) -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7" data-purpose="product-catalog-grid">
+<!-- BEGIN: Product Card 1 - Pacamara -->
+<article class="product-card bg-white rounded-2xl p-6 relative flex flex-col justify-between border border-[#EBE1D4] shadow-[0_2px_8px_rgba(0,0,0,0.02)]">
+<!-- Badge Tag -->
+<div class="absolute top-5 left-5 z-10">
+<span class="inline-block bg-[#BA8E59] text-white text-[11px] font-semibold px-3 py-1 rounded-full shadow-sm">
+            Tueste medio
+          </span>
+</div>
+<!-- Packaging Image Presentation -->
+<div class="w-full flex justify-center items-center pt-2 pb-6 min-h-[280px]">
+<img alt="Café de Especialidad Pacamara - El Salvador" class="h-64 object-contain filter drop-shadow-md" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2jO3OiB1gPCvO4QezqOysDWmOs5qPBHv5qO1NgS7luNdpMCTiesMMOB3Vf_55ufBbJDRN7tqS5kt82rSchZ9KnnCRF6PnzeXXiEgTHydws_PBpK_racerGRCV14sU4mhczj1jOvJ5QniIaeyx1jiaMCb1ZMrlmm1sziU7njrSt5IE5gjKo_bRPOMY04NcInyzH0hZPoJVe_rEw4Go1j3xIgmHkJXl3lHe0MY04qgpMrP-tnOaxmV45A">
+</div>
+<!-- Coffee Details Description -->
+<div class="pt-2 border-t border-gray-50 flex flex-col">
+<span class="text-[11px] tracking-wider uppercase font-semibold text-[#5A6E59] mb-1">
+            EL SALVADOR · APANECA-ILAMATEPEC
+          </span>
+<h2 class="font-fraunces text-2xl font-bold text-[#2B1810] mb-1.5">
+            Pacamara
+          </h2>
+<p class="text-[14px] italic text-[#6B5A4E] mb-5">
+            Chocolate oscuro, frutos rojos, panela
+          </p>
+<div class="text-[15px] text-[#4A3B32]">
+            Desde <span class="font-bold text-[#2B1810] text-lg">$6.50</span>
+</div>
+</div>
+</article>
+<!-- END: Product Card 1 - Pacamara -->
+<!-- BEGIN: Product Card 2 - Bourbon -->
+<article class="product-card bg-white rounded-2xl p-6 relative flex flex-col justify-between border border-[#EBE1D4] shadow-[0_2px_8px_rgba(0,0,0,0.02)]">
+<!-- Badge Tag -->
+<div class="absolute top-5 left-5 z-10">
+<span class="inline-block bg-[#BA8E59] text-white text-[11px] font-semibold px-3 py-1 rounded-full shadow-sm">
+            Tueste medio
+          </span>
+</div>
+<!-- Packaging Image Presentation -->
+<div class="w-full flex justify-center items-center pt-2 pb-6 min-h-[280px]">
+<img alt="Café de Especialidad Bourbon - Ruanda" class="h-64 object-contain filter drop-shadow-md" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzGf9lZPlklO2i0_6rdUVM11pI53RM4AUIQYWcyBbbtx1mL1O3hSMFT9APY4B6G0FF4QU3aRljqQOv0Xw_Rl7bsyMbAjvFXbqoRNU5hw9dAwERvMWgbMUniGbAxf-sHydtMING9GChDIh8Twp8YP3WEYk_aZp3cI669sLcbjLoi8xJJuXgGCjchy1b1mzl54_NNaJ2QUyO2nX-atVzpLypmHCJqSmxEt1ntPJ7eubb1VD-r_Y2DLsB6w">
+</div>
+<!-- Coffee Details Description -->
+<div class="pt-2 border-t border-gray-50 flex flex-col">
+<span class="text-[11px] tracking-wider uppercase font-semibold text-[#5A6E59] mb-1">
+            RUANDA · LAGO KIVU
+          </span>
+<h2 class="font-fraunces text-2xl font-bold text-[#2B1810] mb-1.5">
+            Bourbon
+          </h2>
+<p class="text-[14px] italic text-[#6B5A4E] mb-5">
+            Ciruela, té negro, caramelo
+          </p>
+<div class="text-[15px] text-[#4A3B32]">
+            Desde <span class="font-bold text-[#2B1810] text-lg">$8.00</span>
+</div>
+</div>
+</article>
+<!-- END: Product Card 2 - Bourbon -->
+<!-- BEGIN: Product Card 3 - Geisha -->
+<article class="product-card bg-white rounded-2xl p-6 relative flex flex-col justify-between border border-[#EBE1D4] shadow-[0_2px_8px_rgba(0,0,0,0.02)]">
+<!-- Badge Tag -->
+<div class="absolute top-5 left-5 z-10">
+<span class="inline-block bg-[#CDBCA6] text-[#2B1810] text-[11px] font-semibold px-3 py-1 rounded-full shadow-sm">
+            Tueste claro
+          </span>
+</div>
+<!-- Packaging Image Presentation -->
+<div class="w-full flex justify-center items-center pt-2 pb-6 min-h-[280px]">
+<img alt="Café de Especialidad Geisha - Panamá" class="h-64 object-contain filter drop-shadow-md" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBW_mM8gUJ07Z49rpVC7JFBqXjesD07h_161rIWKyMbGY6dgP8_htAEDPB7l59yGQWsLPox_QEPMzvlXxMqfN6hEjf-XyhV7U20_bq7wmHnaOGgUqVqF9uONhC-XGW71gBzrXI-osBEIiITgE5YeGEFZdQ1gsK3_5W00IVZ-gOAzNnnAmRmvUs-DoXMo-fhsiKGLDqT86IvkeucIKZhh5PRT0Z7VgFcs0pC_eI3uz-p1dAYa4fG622rxw">
+</div>
+<!-- Coffee Details Description -->
+<div class="pt-2 border-t border-gray-50 flex flex-col">
+<span class="text-[11px] tracking-wider uppercase font-semibold text-[#5A6E59] mb-1">
+            PANAMÁ · BOQUETE
+          </span>
+<h2 class="font-fraunces text-2xl font-bold text-[#2B1810] mb-1.5">
+            Geisha
+          </h2>
+<p class="text-[14px] italic text-[#6B5A4E] mb-5">
+            Jazmín, bergamota, durazno
+          </p>
+<div class="text-[15px] text-[#4A3B32]">
+            Desde <span class="font-bold text-[#2B1810] text-lg">$12.00</span>
+</div>
+</div>
+</article>
+<!-- END: Product Card 3 - Geisha -->
+</section>
+</main>
+<!-- END: MainContent -->
+<!-- BEGIN: MainFooter -->
+<footer class="w-full py-8 text-center" data-purpose="site-footer">
+<p class="text-[13px] text-[#716155] font-normal">
+      © 2026 Global Roast Coffee
+    </p>
+</footer>
+<!-- END: MainFooter -->
+
+
+</body></html>

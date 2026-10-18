@@ -1,0 +1,255 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Pacamara - Global Roast Coffee</title>
+<!-- Google Fonts: Fraunces & DM Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS v3 with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Custom Configuration -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              cream: '#F4EBE1',
+              dark: '#30221F',
+              button: '#352522',
+              hover: '#261a18',
+              muted: '#766D67',
+              border: '#E3D7C9',
+              badgeBrown: '#B48A63',
+              badgeGreen: '#C8CEB9',
+              badgeGreenText: '#4A5B3B',
+              tastingText: '#422B1E'
+            }
+          },
+          fontFamily: {
+            serif: ['Fraunces', 'serif'],
+            sans: ['"DM Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+<!-- Custom Typography & Layout Overrides -->
+<style data-purpose="typography">
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background-color: #F4EBE1;
+      color: #30221F;
+    }
+    .font-fraunces {
+      font-family: 'Fraunces', serif;
+    }
+  </style>
+<style data-purpose="custom-shadows">
+    .product-img-shadow {
+      box-shadow: 0 10px 30px -10px rgba(78, 52, 46, 0.15);
+    }
+    .selected-option {
+      border-color: #352522 !important;
+      background-color: #FFFFFF !important;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col bg-[#F4EBE1] text-[#30221F] antialiased selection:bg-[#B48A63] selection:text-white">
+<!-- BEGIN: MainHeader -->
+<header class="w-full border-b border-[#E7DCCE]/60 bg-[#F4EBE1]/90 sticky top-0 z-50 backdrop-blur-sm" data-purpose="main-navigation">
+<div class="max-w-[1240px] mx-auto px-6 h-20 flex items-center justify-between">
+<!-- Brand Logo -->
+<a class="flex items-center gap-3 group" href="#" title="Global Roast Coffee"><img alt="Global Roast Coffee Logo" class="h-10 w-auto object-contain transition-transform group-hover:scale-105 duration-200" src="https://lh3.googleusercontent.com/aida/AEtjO1Unh_sParI6daTBKLrcr7CnhvfPYB4gORCLX9Nu880kEnuxM7evrXijC1pEppa4wOhGFebvTDs1T5XvlXEwgmgSy3_5fpnRo6LXnjhHzdtIz_lQ1Qs4khN7hFHx2aRU_RWy1EQFIEAV5zz7OFSDe0qLmmzPkm9mtIp_ScmbuAFudYPBamN-GujxBiBH9j-BklONHQzgpC2RQVKq9S60e0o2TklX5tkBuILXt-G4QDbYyA"></a>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center gap-9 text-[15px] text-[#443833] font-medium">
+<a class="hover:text-black transition-colors" href="#">Inicio</a>
+<a class="text-[#30221F] font-semibold border-b border-transparent hover:border-[#30221F] transition-all" href="#">Tienda</a>
+<a class="hover:text-black transition-colors" href="#">Nuestro Café</a>
+<a class="hover:text-black transition-colors" href="#">Contacto</a>
+</nav>
+<!-- Cart Icon Action -->
+<div class="flex items-center">
+<button aria-label="Ver carrito" class="relative p-2 text-[#352522] hover:text-black transition-colors">
+<!-- Shopping Bag Outline Icon -->
+<svg class="w-[22px] h-[22px]" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+<path d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</div>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: MainContent -->
+<main class="flex-1 max-w-[1240px] w-full mx-auto px-6 py-10 md:py-14" data-purpose="product-detail">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 xl:gap-16 items-start">
+<!-- BEGIN: ProductImageGallery -->
+<!-- Left Column: Product Showcase Container -->
+<div class="lg:col-span-5 flex justify-center sticky top-28" data-purpose="product-image-container">
+<div class="w-full max-w-[480px] aspect-[4/5] rounded-[28px] overflow-hidden bg-[#ECE1D3]/50 flex items-center justify-center p-6 sm:p-10 relative">
+<!-- Main Bag Product Rendering -->
+<img alt="Café Pacamara - Global Roast Coffee" class="max-h-[500px] w-auto object-contain drop-shadow-2xl transition-transform duration-500 hover:scale-[1.02]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-aO8EiCpQ3PsB1VdaHoyQj3TmAWKeUTGLLQC7JvlO-C9g3cm3PX9kFMAklp2OOI22UJtQ3wdk0-Lo579skCHYaw1aXhxQAflbsUDZjIUIm4YLv8LMNha2VBHdwec6QwbTQDU_J4gVFN5tvvyH7TM5Gjcdgd2xnqAGvGVAHHou-cECBAQhIKwySbbA3YTjDwjuWYFuCX6U0O4ifEwekRIGqmjmJSx77UD_PT7qSLXxcK_qxEt3T23GLA">
+</div>
+</div>
+<!-- END: ProductImageGallery -->
+<!-- BEGIN: ProductDetailsAndActions -->
+<!-- Right Column: Specs, Grind Options, and Purchase Flow -->
+<section class="lg:col-span-7 flex flex-col pt-1" data-purpose="product-info-column">
+<!-- Header & Title Information -->
+<h1 class="font-fraunces text-4xl sm:text-5xl font-medium tracking-tight text-[#2B1B17] mb-2">
+          Pacamara
+        </h1>
+<p class="text-[13.5px] text-[#695F59] font-normal tracking-wide mb-4">
+          El Salvador · Apaneca-Ilamatepec · 1,400–1,700 msnm · Pacamara
+        </p>
+<!-- Product Badges -->
+<div class="flex items-center gap-2.5 mb-6" data-purpose="product-tags">
+<span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-[#B89476] text-white tracking-wide">
+            Tueste medio
+          </span>
+<span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-[#CFD7C7] text-[#4F5943] tracking-wide">
+            Proceso Lavado
+          </span>
+</div>
+<!-- Flavor Notes Card -->
+<div class="w-full bg-[#FCFBF8] border border-[#E9DFD3] rounded-2xl px-5 py-3.5 mb-6 flex items-center gap-3 shadow-[0_2px_8px_rgba(0,0,0,0.02)]" data-purpose="flavor-notes">
+<!-- Steaming Cup Icon -->
+<span class="text-[#B48A63] flex-shrink-0">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+<path d="M17 8h1a4 4 0 1 1 0 8h-1"></path>
+<path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"></path>
+<line x1="6" x2="6" y1="2" y2="4"></line>
+<line x1="10" x2="10" y1="2" y2="4"></line>
+<line x1="14" x2="14" y1="2" y2="4"></line>
+</svg>
+</span>
+<p class="italic text-[15px] font-fraunces text-[#3F2B22]">
+            Chocolate oscuro, frutos rojos, panela
+          </p>
+</div>
+<!-- Description Paragraph -->
+<p class="text-[14.5px] leading-relaxed text-[#594E48] mb-8 max-w-xl">
+          Variedad nacida en El Salvador del cruce entre Pacas y Maragogipe. Granos grandes, cuerpo cremoso y una dulzura que recuerda a las fincas del occidente del país.
+        </p>
+<!-- Size Selection Section -->
+<div class="mb-7" data-purpose="size-selector">
+<label class="block text-xs font-bold uppercase tracking-wider text-[#352522] mb-3">
+            Tamaño
+          </label>
+<button class="w-36 py-3 px-4 bg-[#352522] text-white rounded-xl flex flex-col items-center justify-center shadow-sm" type="button">
+<span class="font-bold text-[15px] leading-tight">340g</span>
+<span class="text-xs text-white/80 font-normal leading-tight mt-0.5">$6.50</span>
+</button>
+</div>
+<!-- Grind Selection Section -->
+<div class="mb-7" data-purpose="grind-selector">
+<label class="block text-xs font-bold uppercase tracking-wider text-[#352522] mb-3">
+            Molienda
+          </label>
+<div class="space-y-2.5 max-w-xl" id="grind-options">
+<!-- Option 1 (Selected) -->
+<button class="w-full text-left py-3 px-5 rounded-xl border-2 border-[#352522] bg-[#FFFFFF] flex justify-between items-center transition-all shadow-sm" type="button">
+<span class="font-medium text-[14.5px] text-[#2B1B17]">Grano entero</span>
+<span class="text-xs text-[#7A706A]">Recomendado para máxima frescura</span>
+</button>
+<!-- Option 2 -->
+<button class="w-full text-left py-3 px-5 rounded-xl border border-[#E4D7C8] bg-white/70 hover:bg-white flex justify-between items-center transition-all" type="button">
+<span class="font-medium text-[14.5px] text-[#3E332E]">Molido grueso</span>
+<span class="text-xs text-[#8A807A]">Prensa francesa, cold brew</span>
+</button>
+<!-- Option 3 -->
+<button class="w-full text-left py-3 px-5 rounded-xl border border-[#E4D7C8] bg-white/70 hover:bg-white flex justify-between items-center transition-all" type="button">
+<span class="font-medium text-[14.5px] text-[#3E332E]">Molido medio</span>
+<span class="text-xs text-[#8A807A]">Filtrado, Chemex, V60</span>
+</button>
+<!-- Option 4 -->
+<button class="w-full text-left py-3 px-5 rounded-xl border border-[#E4D7C8] bg-white/70 hover:bg-white flex justify-between items-center transition-all" type="button">
+<span class="font-medium text-[14.5px] text-[#3E332E]">Molido fino</span>
+<span class="text-xs text-[#8A807A]">Espresso, cafetera italiana</span>
+</button>
+<!-- Option 5 -->
+<button class="w-full text-left py-3 px-5 rounded-xl border border-[#E4D7C8] bg-white/70 hover:bg-white flex justify-between items-center transition-all" type="button">
+<span class="font-medium text-[14.5px] text-[#3E332E]">Molido extra fino</span>
+<span class="text-xs text-[#8A807A]">Turca, moka</span>
+</button>
+</div>
+<!-- Grind Guide Link -->
+<div class="mt-3">
+<span class="text-xs text-[#6F6660]">¿No sabes cuál elegir?</span>
+<a class="text-xs text-[#352522] underline underline-offset-2 ml-1 font-medium hover:text-black" href="#">Guía de molienda</a>
+</div>
+</div>
+<!-- Quantity & Total Bar -->
+<div class="flex items-end justify-between max-w-xl mb-4" data-purpose="quantity-and-pricing">
+<!-- Counter Control -->
+<div class="flex items-center bg-white border border-[#DDD0C2] rounded-full px-3 py-1.5 shadow-sm">
+<button aria-label="Disminuir cantidad" class="w-7 h-7 flex items-center justify-center text-[#554741] hover:text-black text-lg font-light leading-none transition-colors" id="btn-decrease" type="button">
+              −
+            </button>
+<span class="w-8 text-center text-sm font-semibold text-[#2F211D]" id="quantity-display">
+              1
+            </span>
+<button aria-label="Aumentar cantidad" class="w-7 h-7 flex items-center justify-center text-[#554741] hover:text-black text-base font-light leading-none transition-colors" id="btn-increase" type="button">
+              +
+            </button>
+</div>
+<!-- Price Display -->
+<div class="text-right">
+<span class="block text-[11px] text-[#7F746E] uppercase font-semibold tracking-wider">Total</span>
+<span class="font-fraunces text-3xl font-medium text-[#291A16] leading-none tracking-tight">
+              $6.50
+            </span>
+</div>
+</div>
+<!-- Primary Call to Action -->
+<div class="max-w-xl mb-5" data-purpose="cart-cta">
+<button class="w-full py-4 px-6 bg-[#352522] hover:bg-[#251917] active:scale-[0.99] text-white font-medium text-[15.5px] rounded-2xl shadow-sm transition-all duration-150" type="button">
+            Agregar al carrito
+          </button>
+</div>
+<!-- Back Link Navigation -->
+<div class="max-w-xl">
+<a class="inline-flex items-center text-xs text-[#6B615B] hover:text-black transition-colors font-medium" href="#">
+<span class="mr-1.5">←</span> Volver a la tienda
+          </a>
+</div>
+</section>
+<!-- END: ProductDetailsAndActions -->
+</div>
+</main>
+<!-- END: MainContent -->
+<!-- BEGIN: MainFooter -->
+<footer class="w-full py-9 border-t border-[#E8DDCE]/70 text-center" data-purpose="main-footer">
+<p class="text-xs text-[#7B716A]">
+      © 2026 Global Roast Coffee
+    </p>
+</footer>
+<!-- END: MainFooter -->
+<!-- Simple Quantity Interactivity Script -->
+<script data-purpose="quantity-counter">
+    const decBtn = document.getElementById('btn-decrease');
+    const incBtn = document.getElementById('btn-increase');
+    const display = document.getElementById('quantity-display');
+
+    let count = 1;
+
+    if (decBtn && incBtn && display) {
+      decBtn.addEventListener('click', () => {
+        if (count > 1) {
+          count--;
+          display.textContent = count;
+        }
+      });
+
+      incBtn.addEventListener('click', () => {
+        count++;
+        display.textContent = count;
+      });
+    }
+  </script>
+
+
+
+
+</body></html>

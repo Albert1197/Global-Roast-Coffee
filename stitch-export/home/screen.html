@@ -1,0 +1,284 @@
+<!DOCTYPE html><html lang="es" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Global Roast Coffee - Café del mundo, tostado para vos</title>
+<!-- Google Fonts: Fraunces & DM Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&amp;family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script data-purpose="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'cream-bg': '#F4EAE0',
+            'cream-light': '#FDFBF7',
+            'coffee-dark': '#2E1E17',
+            'coffee-banner': '#33231D',
+            'coffee-text': '#2A1C16',
+            'caramel': '#C59B6C',
+            'caramel-hover': '#B68A5A',
+            'olive-green': '#5A6F4E',
+            'badge-mint': '#E8EFE6',
+          },
+          fontFamily: {
+            serif: ['Fraunces', 'serif'],
+            sans: ['"DM Sans"', 'sans-serif'],
+          }
+        }
+      }
+    };
+  </script>
+<!-- Custom Typography & Specific Graphic Stylings -->
+<style data-purpose="typography">
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background-color: #F4EAE0;
+      color: #2A1C16;
+      -webkit-font-smoothing: antialiased;
+    }
+    .font-fraunces {
+      font-family: 'Fraunces', Georgia, serif;
+    }
+  </style>
+<style data-purpose="hero-graphics">
+    /* Hero realistic wooden background with beans effect using layered dark warm textures */
+    .hero-wood-bg {
+      background-color: #27170e;
+      background-image: 
+        radial-gradient(circle at 80% 20%, rgba(20, 10, 5, 0.45) 0%, rgba(15, 8, 4, 0.85) 75%),
+        radial-gradient(ellipse at 15% 55%, rgba(65, 38, 24, 0.4) 0%, rgba(20, 10, 5, 0.8) 70%),
+        repeating-linear-gradient(45deg, rgba(30, 17, 10, 0.2) 0px, rgba(30, 17, 10, 0.2) 2px, transparent 2px, transparent 8px),
+        linear-gradient(180deg, rgba(38, 22, 14, 0.8) 0%, rgba(24, 13, 8, 0.95) 100%);
+    }
+
+    /* Subtle bean texture overlay spots for high visual fidelity */
+    .wood-grain-overlay {
+      background: radial-gradient(circle at 60% 15%, rgba(120, 75, 45, 0.18) 0%, transparent 45%),
+                  radial-gradient(circle at 85% 80%, rgba(95, 55, 30, 0.25) 0%, transparent 40%);
+    }
+  </style>
+</head>
+<body class="bg-cream-bg text-coffee-text selection:bg-caramel selection:text-white">
+<!-- BEGIN: MainHeader -->
+<header class="w-full bg-cream-bg/95 backdrop-blur-sm sticky top-0 z-50 border-b border-[#E7DCCE]/60" data-purpose="site-navigation-bar">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+<!-- Brand Logo -->
+<a class="flex items-center gap-3.5 group" data-purpose="brand-logo" href="#"><img src="https://lh3.googleusercontent.com/aida/AEtjO1Vnn2m0U-TQ4HaPFSdrnDuvU6s4pTVwCqYa7fkD10CbfNvGahDdCYE7apKe9gTBvRrR2ZYYSO8dZt-yF3pFmi3QM6neiEJYl5o_DZHltqpAKfcjRlRZ7cYFFxr-3pQKIzZWOpY8AF_vpOToM3itjFn0gFdXFILGBDGwjAzX0mOSF_lpGONK2JGxbBIxQ4vtxDMeu-cNbm0tJn1buL98Xd3dfLhteeLZtb6SC8M4CBDqnA" alt="Global Roast Coffee" class="h-9 w-auto object-contain"></a>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center space-x-10 text-[14.5px] font-medium text-coffee-dark" data-purpose="primary-links">
+<a class="hover:text-caramel transition-colors duration-200" href="#inicio">Inicio</a>
+<a class="hover:text-caramel transition-colors duration-200" href="#tienda">Tienda</a>
+<a class="hover:text-caramel transition-colors duration-200" href="#nuestro-cafe">Nuestro Café</a>
+<a class="hover:text-caramel transition-colors duration-200" href="#contacto">Contacto</a>
+</nav>
+<!-- Cart Icon Action -->
+<div class="flex items-center">
+<button aria-label="Carrito de compras" class="p-2 text-coffee-dark hover:text-caramel transition-colors relative" data-purpose="cart-button">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</div>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: HeroSection -->
+<section class="relative hero-wood-bg wood-grain-overlay min-h-[640px] lg:min-h-[760px] flex items-center overflow-hidden" data-purpose="hero-banner">
+<!-- Visual background decoration: roasted beans and grounded coffee aesthetics -->
+<div class="absolute inset-0 pointer-events-none"><img src="https://lh3.googleusercontent.com/aida/AEtjO1VsL3QKETelI0QqbRCnwR23VY42Uwrh10l047JGA3uDhFmLaxNRPlwZEbAV0fbPNHJDRRFuMKStFZIzhhRPDtEkkjYEcs_9tgVpbJ0qj-3olzKfb30RSnWrR_70CBc3fDsuoNu7LR_gS0wYrkBrjsIPDkCPUyHQb-B5NzTqpBhaKZqoJ3E6e_3lj1z9Su5jJ4eafvszy2-X4HTYwt0icd77p0fkz8bBBU1o7UIgdV9I" alt="Fondo de café en grano y molido" class="w-full h-full object-cover"><div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/40"></div></div>
+<div class="relative max-w-7xl mx-auto px-6 lg:px-12 w-full py-16 lg:py-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Hero Left Text Content -->
+<div class="lg:col-span-7 space-y-7 z-10">
+<h1 class="font-fraunces text-4xl sm:text-5xl lg:text-[4.25rem] font-bold text-[#F8F3ED] leading-[1.1] tracking-tight">
+          Café del mundo,<br>
+          tostado para vos
+        </h1>
+<p class="text-base sm:text-lg text-[#D6C5B8] max-w-xl font-normal leading-relaxed">
+          Granos seleccionados de las mejores regiones cafetaleras — tostados frescos, enviados directo a tu puerta
+        </p>
+<div class="pt-3">
+<a class="inline-flex items-center gap-3 bg-caramel hover:bg-caramel-hover text-coffee-dark font-medium text-sm sm:text-base px-8 py-3.5 rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5" data-purpose="cta-button" href="#tienda">
+<span class="">Explora nuestros cafés</span>
+<span class="text-lg leading-none">→</span>
+</a>
+</div>
+</div>
+<!-- Hero Right: Illustrated Mascot Explorer -->
+<div class="lg:col-span-5 flex justify-center lg:justify-end items-center relative z-10" data-purpose="hero-mascot-container"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOP-imyAzeoODDCYQPWMg_QeDHasw9oOclzPyYG15eiI_WxRxTI5tV10C_VALjAW-iy9FgFNHsD0oCbjjyMGB4JJhfp91SygGm25TRw8oWOOX49SHQ8RGMQOf-DXiuNvd3TRzkISfVhZXaVdzYWgv8GgTH3Qq7oLR4UxDT8kZdrpzTVgXqx8BVwvQ0PsTS6MiZon6WbsAdzgH69cNO4JO63ovAeynEWve2z7ZAD_NfJUEhrDNoE5VruA" alt="Mascota Global Roast Coffee" class="relative z-10 w-64 sm:w-80 lg:w-96 h-auto drop-shadow-2xl object-contain hover:scale-105 transition-transform duration-300"></div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: FeaturedProductsSection -->
+<section class="py-16 lg:py-24 max-w-7xl mx-auto px-6 lg:px-12" data-purpose="featured-products" id="tienda">
+<!-- Section Title & Subheading -->
+<div class="mb-12">
+<span class="text-xs font-bold uppercase tracking-[0.22em] text-olive-green block mb-2" data-purpose="section-eyebrow">
+        Bitácora de orígenes
+      </span>
+<h2 class="font-fraunces text-3xl sm:text-4xl text-coffee-dark font-bold tracking-tight">
+        Nuestros cafés destacados
+      </h2>
+</div>
+<!-- Product Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-8">
+<!-- Card 1: Pacamara -->
+<article class="bg-cream-light rounded-[32px] p-8 flex flex-col justify-between border border-[#EADBCC] shadow-sm hover:shadow-md transition-shadow duration-300" data-purpose="product-card">
+<!-- Coffee Bag Package Graphic Mockup -->
+<div class="w-full flex justify-center py-6"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiNcSU4LxVyR3qESXKndHMYk9--I4Y9h4wwTGa-m8YNfr4s8Kx3L5mZWAR203aIjFkgeiOMVxjM8g_iTkKA_9o__dXUdI2GMUUyGht_BLk4Y6xUvGrqrUtFDB-P0e5zZjPwzmf92EVdNhGHqz0vo6zqZ4iGsuY7Y_6x9orfMfTcD8Ss_EA3VWr9QxINsWwmRQrgXfwun2U7TsZJvn91xTGz0fhczv3IG2eS95yVdh0jDiVQrLlO5__Kw" alt="Café Pacamara" class="h-64 mx-auto object-contain drop-shadow-md"></div>
+<!-- Product Card Details -->
+<div class="mt-4 space-y-2">
+<span class="text-[10px] tracking-wider uppercase font-semibold text-[#826E63] block">
+            EL SALVADOR · APANECA-ILAMATEPEC
+          </span>
+<h3 class="font-fraunces text-2xl font-bold text-coffee-dark">Pacamara</h3>
+<p class="text-sm italic text-[#635147] font-serif">
+            Chocolate oscuro, frutos rojos, panela
+          </p>
+<div class="pt-3">
+<span class="text-sm text-[#7D6B60]">Desde </span>
+<span class="text-base font-bold text-coffee-dark font-fraunces">$6.50</span>
+</div>
+</div>
+</article>
+<!-- Card 2: Bourbon -->
+<article class="bg-cream-light rounded-[32px] p-8 flex flex-col justify-between border border-[#EADBCC] shadow-sm hover:shadow-md transition-shadow duration-300" data-purpose="product-card">
+<!-- Coffee Bag Package Graphic Mockup -->
+<div class="w-full flex justify-center py-6"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqsDfKh2FbiVePf1ZGaN8qbzFb7d3ey5uTAHeukoOfbG4G1diVt-q25DlAGNxH5tjNo9ezVr6_f33D5RtTn9ROA82m6jgriEi07B8oE_PXJAlHLC0vNem7tTPOEBPhAoIms9644O6L_kESNrjD0BTsiig5n6YbzkOITRIc0Hx3i4tELbStsIVsXJtj07Fqf_D3J-fEgRkVmN7gZoeOG34POnhlDP64cLi21lolp_T4yJBekhApGKTBgA" alt="Café Bourbon" class="h-64 mx-auto object-contain drop-shadow-md"></div>
+<!-- Product Card Details -->
+<div class="mt-4 space-y-2">
+<span class="text-[10px] tracking-wider uppercase font-semibold text-[#826E63] block">
+            RUANDA · LAGO KIVU
+          </span>
+<h3 class="font-fraunces text-2xl font-bold text-coffee-dark">Bourbon</h3>
+<p class="text-sm italic text-[#635147] font-serif">
+            Ciruela, té negro, caramelo
+          </p>
+<div class="pt-3">
+<span class="text-sm text-[#7D6B60]">Desde </span>
+<span class="text-base font-bold text-coffee-dark font-fraunces">$8.00</span>
+</div>
+</div>
+</article>
+<!-- Card 3: Geisha -->
+<article class="bg-cream-light rounded-[32px] p-8 flex flex-col justify-between border border-[#EADBCC] shadow-sm hover:shadow-md transition-shadow duration-300" data-purpose="product-card">
+<!-- Coffee Bag Package Graphic Mockup -->
+<div class="w-full flex justify-center py-6"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKV9WgSlekM9bGsmsSuUqGH6zdKf1BNzhDcc32qZ8CD2XDOrTyRMLHLMyM6-Z1gdTFUrSu2qaEKW8MDbkYBm4R-MGelbrWzWwlFoD3uwHcBx4a_rx00qPNzfkXTHMc3wbIUPAMGOwfTQAt3o3mMBl8PcwGD2v5HITt0GyVAcvV8eULfDkUzkYArwIoFsrgB-b894CM2G2jWf_C3l_Iky63IYvvMKmb1TyGsaZpBZWxIOwHf_lANGl6CA" alt="Café Geisha" class="h-64 mx-auto object-contain drop-shadow-md"></div>
+<!-- Product Card Details -->
+<div class="mt-4 space-y-2">
+<span class="text-[10px] tracking-wider uppercase font-semibold text-[#826E63] block">
+            PANAMÁ · BOQUETE
+          </span>
+<h3 class="font-fraunces text-2xl font-bold text-coffee-dark">Geisha</h3>
+<p class="text-sm italic text-[#635147] font-serif">
+            Jazmín, bergamota, durazno
+          </p>
+<div class="pt-3">
+<span class="text-sm text-[#7D6B60]">Desde </span>
+<span class="text-base font-bold text-coffee-dark font-fraunces">$12.00</span>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- END: FeaturedProductsSection -->
+<!-- BEGIN: ProcessStepsSection -->
+<section class="py-16 lg:py-24 max-w-5xl mx-auto px-6 text-center" data-purpose="brand-process">
+<!-- Main Header -->
+<h2 class="font-fraunces text-3xl sm:text-4xl lg:text-[2.6rem] font-bold text-coffee-dark mb-16">
+      De la finca a tu taza
+    </h2>
+<!-- Steps 3-Column Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
+<!-- Step 01: Seleccionamos -->
+<div class="flex flex-col items-center text-center space-y-3" data-purpose="process-step">
+<!-- Mint circular icon container -->
+<div class="w-16 h-16 rounded-full bg-badge-mint flex items-center justify-center text-olive-green mb-2">
+<!-- Plant sprout icon -->
+<svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
+<path d="M7 20h10"></path>
+<path d="M10 20c0-4 1.5-7.5 4-10"></path>
+<path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5-.4-4.8-1.5-1.2-1-1.6-2.5-1.5-4.1 1.7.1 3 1 4 1.9Z"></path>
+<path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.6 1-1 1.4-2.4 1.2-3.8-1.5.1-3 .6-4.4 1.4Z"></path>
+</svg>
+</div>
+<span class="text-xs font-serif text-caramel tracking-wider">01</span>
+<h3 class="font-fraunces text-2xl font-bold text-coffee-dark">Seleccionamos</h3>
+<p class="text-sm text-[#6C5B52] max-w-xs leading-relaxed">
+          Visitamos fincas de distintos orígenes
+        </p>
+</div>
+<!-- Step 02: Tostamos -->
+<div class="flex flex-col items-center text-center space-y-3" data-purpose="process-step">
+<!-- Mint circular icon container -->
+<div class="w-16 h-16 rounded-full bg-badge-mint flex items-center justify-center text-olive-green mb-2">
+<!-- Roasting Flame icon -->
+<svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
+<path d="M8.5 14.5A2.5 2.5 0 0 0 11 17c1.38 0 2.5-1.12 2.5-2.5 0-.61-.22-1.17-.58-1.6L12 11.5l-.92 1.4c-.36.43-.58.99-.58 1.6Z"></path>
+<path d="M12 2c1 3 4 5.5 4 10a6 6 0 1 1-12 0c0-4.5 3-7 4-10 1 2 2 3 4 0Z"></path>
+</svg>
+</div>
+<span class="text-xs font-serif text-caramel tracking-wider">02</span>
+<h3 class="font-fraunces text-2xl font-bold text-coffee-dark">Tostamos</h3>
+<p class="text-sm text-[#6C5B52] max-w-xs leading-relaxed">
+          Perfil de tueste específico para cada grano
+        </p>
+</div>
+<!-- Step 03: Enviamos -->
+<div class="flex flex-col items-center text-center space-y-3" data-purpose="process-step">
+<!-- Mint circular icon container -->
+<div class="w-16 h-16 rounded-full bg-badge-mint flex items-center justify-center text-olive-green mb-2">
+<!-- Shipping Package Box icon -->
+<svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
+<path d="m7.5 4.27 9 5.15"></path>
+<path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path>
+<path d="m3.3 7 8.7 5 8.7-5"></path>
+<path d="M12 22V12"></path>
+</svg>
+</div>
+<span class="text-xs font-serif text-caramel tracking-wider">03</span>
+<h3 class="font-fraunces text-2xl font-bold text-coffee-dark">Enviamos</h3>
+<p class="text-sm text-[#6C5B52] max-w-xs leading-relaxed">
+          Fresco, en pocos días, directo a tu casa
+        </p>
+</div>
+</div>
+</section>
+<!-- END: ProcessStepsSection -->
+<!-- BEGIN: CallToActionCard -->
+<section class="max-w-7xl mx-auto px-6 lg:px-12 pb-24" data-purpose="wide-cta-banner">
+<div class="bg-coffee-banner rounded-[36px] py-16 px-8 sm:py-20 sm:px-12 text-center text-white shadow-xl relative overflow-hidden">
+<!-- Content Container -->
+<div class="relative z-10 max-w-2xl mx-auto space-y-8">
+<h2 class="font-fraunces text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-[#FDF9F4] tracking-tight">Orígenes, una sola taza</h2>
+<div>
+<a class="inline-flex items-center gap-3 bg-caramel hover:bg-caramel-hover text-coffee-dark font-medium text-sm sm:text-base px-8 py-3.5 rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5" href="#tienda">
+<span class="">Ver toda la tienda</span>
+<span class="text-lg leading-none">→</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- END: CallToActionCard -->
+<!-- BEGIN: MainFooter -->
+<footer class="w-full pb-12 text-center text-xs text-[#7A695E]" data-purpose="site-footer">
+<div class="max-w-7xl mx-auto px-6">
+<p class="">© 2026 Global Roast Coffee</p>
+</div>
+</footer>
+<!-- END: MainFooter -->
+
+
+
+
+
+
+
+
+
+
+</body></html>

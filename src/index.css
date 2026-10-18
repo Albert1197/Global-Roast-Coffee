@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   Tokens de diseño de las 5 pantallas de Stitch (Global Roast Coffee)
+   Fusionados en un solo tema. Los tonos casi no difieren entre pantallas.
+   ========================================================================== */
+@theme {
+  --color-cream-bg: #f4eae0;
+  --color-cream-light: #fdfbf7;
+  --color-coffee-dark: #2e1e17;
+  --color-coffee-banner: #33231d;
+  --color-coffee-primary: #3e2723;
+  --color-coffee-text: #2a1c16;
+  --color-caramel: #c59b6c;
+  --color-caramel-hover: #b68a5a;
+  --color-olive-green: #5a6f4e;
+  --color-badge-mint: #e8efe6;
+  --color-badge-medium: #b48b57;
+  --color-badge-light: #d6c3aa;
+  --color-sub-tag: #687768;
+  --color-forest-btn: #436b38;
+  --color-forest-btn-hover: #385b2f;
+
+  --font-sans: "DM Sans", sans-serif;
+  --font-serif: "Fraunces", serif;
+}
+
+/* Clase compartida por todas las pantallas (definida en cada HTML de Stitch) */
+.font-fraunces {
+  font-family: "Fraunces", Georgia, serif;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background-color: #f4eae0;
+  color: #2a1c16;
+  -webkit-font-smoothing: antialiased;
+}
