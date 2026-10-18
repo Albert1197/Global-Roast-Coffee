@@ -1,8 +1,8 @@
 import { Link, useLocation } from 'react-router-dom'
 import { useCart } from '../context/CartContext'
+import logo from '../assets/Logo.jpeg'
 
-const LOGO =
-  'https://lh3.googleusercontent.com/aida/AEtjO1Unh_sParI6daTBKLrcr7CnhvfPYB4gORCLX9Nu880kEnuxM7evrXijC1pEppa4wOhGFebvTDs1T5XvlXEwgmgSy3_5fpnRo6LXnjhHzdtIz_lQ1Qs4khN7hFHx2aRU_RWy1EQFIEAV5zz7OFSDe0qLmmzPkm9mtIp_ScmbuAFudYPBamN-GujxBiBH9j-BklONHQzgpC2RQVKq9S60e0o2TklX5tkBuILXt-G4QDbYyA'
+const LOGO = logo
 
 const LINKS = [
   { to: '/', label: 'Inicio' },
@@ -36,12 +36,16 @@ export default function Header({ variant = 'default', showBadge = false }) {
   return (
     <header className={wrappers[variant]}>
       <div className={inner[variant]}>
-        <Link className="flex items-center gap-3.5 group" to="/" aria-label="Global Roast Coffee - Inicio">
+        <Link className="flex items-center gap-3 group" to="/" aria-label="Global Roast Coffee - Inicio">
           <img
             src={LOGO}
             alt="Global Roast Coffee"
-            className="h-10 w-auto object-contain transition-transform group-hover:scale-105"
+            className="h-12 w-12 rounded-full object-cover ring-1 ring-coffee-dark/10 transition-transform group-hover:scale-105"
           />
+          <span className="hidden sm:flex flex-col leading-none">
+            <span className="font-fraunces text-lg font-bold text-coffee-dark">Global Roast</span>
+            <span className="text-[0.62rem] font-semibold tracking-[0.16em] text-olive-green uppercase">Coffee</span>
+          </span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-9 text-[15px] font-medium text-coffee-dark">
