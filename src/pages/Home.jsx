@@ -73,6 +73,7 @@ export default function Home() {
             <div className="pt-3">
               <Link
                 to="/tienda"
+                title="Ir al catálogo de la tienda"
                 className="inline-flex items-center gap-3 bg-caramel hover:bg-caramel-hover text-coffee-dark font-medium text-sm sm:text-base px-8 py-3.5 rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
               >
                 <span>Explora nuestros cafés</span>
