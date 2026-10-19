@@ -1,4 +1,4 @@
-# 🌍 Global Roast Coffee — App React desde Stitch
+# 🌍 Global Roast Coffee — App React desde Stitch Grupo 4
 
 Aplicación web generada a partir de las pantallas del proyecto de **Google Stitch** ["Global Roast Coffee Home"](https://stitch.withgoogle.com), usando el MCP de Stitch + OpenCode.
 
@@ -107,7 +107,7 @@ scripts/            # Utilidades (unwrap-stitch.cjs extrae el HTML del JSON)
 | **Endpoints principales** | `GET /api/health`, `GET /api/products` y `GET /api/products/{product_id}` |
 | **Herramientas de desarrollo** | Node.js 20.19 o superior y Python |
 
-## Equipo y roles
+## Equipo y roles Grupo 4
 
 Roles sugeridos para equipos de 3 a 5 personas; pueden combinarse según las necesidades del proyecto.
 
