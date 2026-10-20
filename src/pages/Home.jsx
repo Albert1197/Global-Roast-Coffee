@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import { PRODUCTS } from '../data/products'
+import { useProducts } from '../hooks'
 import '../styles/home.css'
 
 const HERO_BG =
@@ -50,6 +50,8 @@ const STEPS = [
 ]
 
 export default function Home() {
+  const products = useProducts()
+
   return (
     <div className="bg-cream-bg text-coffee-text selection:bg-caramel selection:text-white">
       <Header variant="default" />
@@ -73,20 +75,44 @@ export default function Home() {
             <div className="pt-3">
               <Link
                 to="/tienda"
-                title="Ir al catálogo de la tienda"
-                className="inline-flex items-center gap-3 bg-caramel hover:bg-caramel-hover text-coffee-dark font-medium text-sm sm:text-base px-8 py-3.5 rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+                className="inline-flex items-center gap-3 bg-caramel hover:bg-caramel-hover text-coffee-dark font-medium text-base px-8 py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
               >
-                <span>Explora nuestros cafés</span>
-                <span className="text-lg leading-none">→</span>
+                <span>Explorar la tienda</span>
+                <span className="text-xl leading-none">→</span>
               </Link>
             </div>
           </div>
-          <div className="lg:col-span-5 flex justify-center lg:justify-end items-center relative z-10">
-            <img
-              src={MASCOT}
-              alt="Mascota Global Roast Coffee"
-              className="relative z-10 w-64 sm:w-80 lg:w-96 h-auto drop-shadow-2xl object-contain hover:scale-105 transition-transform duration-300"
-            />
+          <div className="lg:col-span-5 relative flex justify-center items-center">
+            <div className="relative w-full max-w-[440px] aspect-[4/5] rounded-[36px] overflow-hidden border border-white/10 shadow-2xl bg-black/30 backdrop-blur-sm">
+              <img src={MASCOT} alt="Ilustración de café de especialidad" className="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* OriginHighlightsSection */}
+      <section className="py-16 lg:py-20 max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          <div className="bg-cream-light rounded-[28px] p-8 border border-[#EADBCC] shadow-sm">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-olive-green block mb-2">América</span>
+            <h3 className="font-fraunces text-2xl font-bold text-coffee-dark mb-2">El Salvador & Panamá</h3>
+            <p className="text-sm text-[#6C5B52] leading-relaxed">
+              Notas dulces a chocolate, caramelo y frutas maduras de fincas volcánicas de altura.
+            </p>
+          </div>
+          <div className="bg-cream-light rounded-[28px] p-8 border border-[#EADBCC] shadow-sm">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-olive-green block mb-2">África</span>
+            <h3 className="font-fraunces text-2xl font-bold text-coffee-dark mb-2">Ruanda & Etiopía</h3>
+            <p className="text-sm text-[#6C5B52] leading-relaxed">
+              Perfiles florales y cítricos brillantes, con notas de té negro, jazmín y bergamota.
+            </p>
+          </div>
+          <div className="bg-cream-light rounded-[28px] p-8 border border-[#EADBCC] shadow-sm">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-olive-green block mb-2">Tueste</span>
+            <h3 className="font-fraunces text-2xl font-bold text-coffee-dark mb-2">Perfil a medida</h3>
+            <p className="text-sm text-[#6C5B52] leading-relaxed">
+              Tostamos en lotes pequeños para respetar el origen de cada variedad y resaltar su carácter.
+            </p>
           </div>
         </div>
       </section>
@@ -102,7 +128,7 @@ export default function Home() {
           </h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-8">
-          {PRODUCTS.map((p) => (
+          {products.map((p) => (
             <Link
               key={p.id}
               to={`/producto/${p.id}`}

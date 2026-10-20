@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import { PRODUCTS } from '../data/products'
+import { useProducts } from '../hooks'
 import '../styles/tienda.css'
 
 const ROASTS = ['Claro', 'Medio', 'Oscuro']
@@ -10,10 +10,11 @@ const ROASTS = ['Claro', 'Medio', 'Oscuro']
 export default function Tienda() {
   const [country, setCountry] = useState('')
   const [roast, setRoast] = useState('')
+  const products = useProducts()
 
-  const countries = [...new Set(PRODUCTS.map((p) => p.origin.split(' · ')[0]))]
+  const countries = [...new Set(products.map((p) => p.origin.split(' · ')[0]))]
 
-  const filtered = PRODUCTS.filter(
+  const filtered = products.filter(
     (p) => (!country || p.origin.startsWith(country)) && (!roast || p.roast === roast),
   )
 

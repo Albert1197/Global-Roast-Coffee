@@ -8,6 +8,7 @@ import DetalleCafe from './pages/DetalleCafe'
 import Checkout from './pages/Checkout'
 import Confirmacion from './pages/Confirmacion'
 import NuestroCafe from './pages/NuestroCafe'
+import NuevoCafe from './pages/NuevoCafe'
 
 // Página provisoria para secciones del menú que no tienen pantalla en Stitch.
 function EnDesarrollo({ titulo }) {
@@ -35,6 +36,7 @@ export default function App() {
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/confirmacion" element={<Confirmacion />} />
         <Route path="/nuestro-cafe" element={<NuestroCafe />} />
+        <Route path="/nuevo-cafe" element={<NuevoCafe />} />
         <Route path="/contacto" element={<EnDesarrollo titulo="Contacto" />} />
         <Route path="*" element={<EnDesarrollo titulo="Página no encontrada" />} />
       </Routes>

@@ -24,6 +24,13 @@ export function getProduct(id) {
   return request(`/products/${encodeURIComponent(id)}`)
 }
 
+export function createProduct(product) {
+  return request('/products', {
+    method: 'POST',
+    body: JSON.stringify(product),
+  })
+}
+
 export function createOrder(order) {
   return request('/orders', { method: 'POST', body: JSON.stringify(order) })
 }

@@ -8,6 +8,7 @@ const LINKS = [
   { to: '/', label: 'Inicio' },
   { to: '/tienda', label: 'Tienda' },
   { to: '/nuestro-cafe', label: 'Nuestro Café' },
+  { to: '/nuevo-cafe', label: '+ Agregar Café' },
   { to: '/contacto', label: 'Contacto' },
 ]
 

@@ -2,7 +2,8 @@ import { useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import { getProduct } from '../data/products'
+import { getProduct as findLocalProduct } from '../data/products'
+import { useProduct } from '../hooks'
 import { useCart } from '../context/CartContext'
 import '../styles/detalle.css'
 
@@ -18,7 +19,8 @@ export default function DetalleCafe() {
   const { id } = useParams()
   const navigate = useNavigate()
   const { add } = useCart()
-  const product = getProduct(id) ?? getProduct('pacamara')
+  const { product: apiProduct } = useProduct(id)
+  const product = apiProduct ?? findLocalProduct(id) ?? findLocalProduct('pacamara')
 
   const [qty, setQty] = useState(1)
   const [grind, setGrind] = useState(GRINDS[0].name)
