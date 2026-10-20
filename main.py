@@ -13,6 +13,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
+from app.database import init_db
 from app.routers import orders, products
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -23,6 +24,8 @@ app = FastAPI(
     description="API del e-commerce de café de especialidad + serving del frontend React.",
     version="1.0.0",
 )
+
+init_db()
 
 # Para desarrollar el frontend con `npm run dev` (Vite en :5173) contra esta API.
 app.add_middleware(

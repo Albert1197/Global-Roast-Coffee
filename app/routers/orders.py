@@ -9,7 +9,7 @@ from datetime import datetime, timezone
 
 from fastapi import APIRouter, HTTPException, status
 
-from app.catalog import PRODUCTS_BY_ID
+from app.database import get_product_by_id
 from app.models import Order, OrderIn, OrderItem
 
 router = APIRouter(prefix="/api/orders", tags=["orders"])
@@ -25,7 +25,7 @@ _lock = threading.Lock()
 def create_order(payload: OrderIn) -> Order:
     items: list[OrderItem] = []
     for item in payload.items:
-        product = PRODUCTS_BY_ID.get(item.id)
+        product = get_product_by_id(item.id)
         if product is None:
             raise HTTPException(
                 status_code=status.HTTP_404_NOT_FOUND,

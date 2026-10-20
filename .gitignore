@@ -3,6 +3,11 @@ dist
 .env
 .env.local
 *.log
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.db
 
 # Contiene la API key de Stitch — no subirlo al repositorio
 opencode.json
